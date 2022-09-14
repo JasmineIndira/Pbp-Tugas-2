@@ -38,4 +38,4 @@ Memasukkan data kedalam html menggunakan double curly brackets seperti berikut {
   {% endfor %}
  ```
 ### Poin 4(deploy)
-memasukkan variable `HEROKU_APP_NAME` dan `HEROKU_API_KEY` pada github secret -> actions untuk mendeploy
+memasukkan variable `HEROKU_APP_NAME` dan `HEROKU_API_KEY` pada github secret -> actions untuk mendeploy lalu run ulang workflow yang gagal.
