@@ -4,4 +4,4 @@ Link hasil deploy dapat diakses (https://tugas2pbpjasmine.herokuapp.com/).
 
 ## Bagan
 
-![bagan]([http://url/to/img.png](https://www.canva.com/design/DAFMLAdFcOo/view))
+![bagan][(https://www.canva.com/design/DAFMLAdFcOo/view?utm_content=DAFMLAdFcOo&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink)]
