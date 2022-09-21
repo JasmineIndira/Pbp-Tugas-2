@@ -37,10 +37,10 @@ Data Delivery Penting dalam Pengimplementasian Sebuah Platform agar user/client 
 8. Mendeploy ke Heroku dengan push berkas ke github dan merefresh workflow gagal di github.
 
 ## Akses URL menggunakan postman
-####1. html
+#### 1. html
 ![html](https://user-images.githubusercontent.com/103538319/191543921-f85db1e9-177d-4c2e-ab7d-6568735e2975.jpg)
-####2. xml
+#### 2. xml
 ![xml](https://user-images.githubusercontent.com/103538319/191544246-db1b6f9e-31f9-4dd6-a326-4b411cbe9286.jpg)
-####3. json
+#### 3. json
 ![json](https://user-images.githubusercontent.com/103538319/191544546-5fb47fbb-8f6b-41d8-912d-16a51f8d8446.jpg)
 
