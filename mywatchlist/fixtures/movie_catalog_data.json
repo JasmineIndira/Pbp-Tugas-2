@@ -1,0 +1,112 @@
+[
+    {
+        "model":"mywatchlist.mywatchlist",
+        "pk":1,
+        "fields":{
+            "watched":true,
+            "title":"Crazy Rich Asians",
+            "rating": 4.5,
+            "release_date": "2018-08-07",
+            "review": "That seldom experienced rom-com that proves crowd-pleasing and accessible without demeaning itself. -Brian Eggert"
+        }
+},
+{
+        "model":"mywatchlist.mywatchlist",
+        "pk":2,
+        "fields":{
+            "watched":false,
+            "title":"The Blair Witch Project",
+            "rating": 4.1,
+            "release_date": "1999-06-30",
+            "review": "An intensely imaginative piece of conceptual filmmaking that also delivers the goods as a dread-drenched horror movie. -Todd McCarthy"
+        }
+    },
+    {
+        "model":"mywatchlist.mywatchlist",
+        "pk":3,
+        "fields":{
+            "watched":true,
+            "title":"The Breakfast Club",
+            "rating": 4.4,
+            "release_date": "1985-05-15",
+            "review": "It's an exceptional film that has not suffered damage over the years. It feels as fresh as it felt decades ago. -Federico Furzan"
+        }
+    },
+    {
+        "model":"mywatchlist.mywatchlist",
+        "pk":4,
+        "fields":{
+            "watched":true,
+            "title":"The Pianist",
+            "rating": 4.8,
+            "release_date": "2002-09-06",
+            "review": "A master work on humanity vs. inhumanity, on the resilience and mercy of art, and on the personal horrors brought on by one of the world darkest events. -Keith Garlington"
+        }
+    },
+    {
+        "model":"mywatchlist.mywatchlist",
+        "pk":5,
+        "fields":{
+            "watched":false,
+            "title":"An Education",
+            "rating": 4.1,
+            "release_date": "2009-10-16",
+            "review": "This is a nostalgically elegant, comically restrained, cleverly scripted film which, in parts, is also extremely moving. -Deborah Ross"
+        }
+    },
+    {
+        "model":"mywatchlist.mywatchlist",
+        "pk":6,
+        "fields":{
+            "watched":true,
+            "title":"Hairspray",
+            "rating": 4.4,
+            "release_date": "2007-06-20",
+            "review": "It pays respect to the original while also carving its own image as a truly good musical. -Felix Vasquez Jr."
+        }
+    },
+    {
+        "model":"mywatchlist.mywatchlist",
+        "pk":7,
+        "fields":{
+            "watched":false,
+            "title":"Footloose",
+            "rating": 4.1,
+            "release_date": "1984-02-17",
+            "review": "Reignited the youth genre with the dynamics of music video aesthetics and has remained a cultural touchstone ever since. -James Kendrick"
+        }
+    },
+    {
+        "model":"mywatchlist.mywatchlist",
+        "pk":8,
+        "fields":{
+            "watched":true,
+            "title":"Charade",
+            "rating": 4.5,
+            "release_date": "1963-12-5",
+            "review": "Few thrillers create as much sheer joy and happiness as Charade in which Cary Grant spoofs his Alfred Hitchcock persona Audrey Hepburn exudes her usual magnetic charm and Paris is as scenic as ever. -G. Allen Johnson"
+        }
+    },
+    {
+        "model":"mywatchlist.mywatchlist",
+        "pk":9,
+        "fields":{
+            "watched":false,
+            "title":"Annie Hall",
+            "rating": 4.3,
+            "release_date": "1977-04-20",
+            "review": "Annie Hall works as a neurotic romance and as a bittersweet comedy. -Bill Morrison"
+        }
+    },
+    {
+        "model":"mywatchlist.mywatchlist",
+        "pk":10,
+        "fields":{
+            "watched":true,
+            "title":"The Devil Wears Prada",
+            "rating": 4.6,
+            "release_date": "2006-06-30",
+            "review": "A sharp script and a colorful cast of characters give insight to New York fashion scene. The Devil Wears Prada is smart, sexy and downright entertaining."
+        }
+    }
+]
