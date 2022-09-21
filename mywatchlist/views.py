@@ -19,7 +19,7 @@ def show_mywatchlist(request):
         'nama': "Jasmine Indira Wibowo",
         'movie_result': movie_result,
     }
-    return render(request, "MyWatchList.html", context)
+    return render(request, "mywatchlist.html", context)
 
 def show_xml(request):
     mywatchlist_data = MyWatchList.objects.all()
