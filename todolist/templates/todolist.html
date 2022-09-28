@@ -8,7 +8,7 @@
         color: black;
         text-align: center;
         vertical-align: middle;
-        background-color: rgb(135, 113, 240);
+        background-color: rgb(187, 178, 226);
         font-size: 15px;
     }
 
@@ -36,19 +36,19 @@
     }
 
     th {
-        color: rgb(233, 151, 246);
+        color: rgb(0, 0, 0);
     }
 
     a,
     a.visited {
-        color: rgb(120, 70, 211);
+        color: rgb(0, 0, 0);
     }
 </style>
 
-<h1>! TO DO LIST !</h1>
+<h1>TO DO LIST</h1>
 <h2>Tugas 4 Assignment PBP/PBD</h2>
 
-<h3>Welcome {{user_name}}✨</h3>
+<h3>✨ Welcome {{user_name}} ✨</h3>
 
 <br />
 <table BORDER="1">
@@ -61,7 +61,7 @@
         <th>Delete Task</th>
     </tr>
     {% comment %} Add the data below this line {% endcomment %}
-    {% for item in todolist_item %}
+    {% for item in list_kerjaan %}
     <tr>
         <td>{{item.date}}</td>
         <td>{{item.title}}</td>
@@ -70,16 +70,18 @@
             {% if item.is_finished %}
             ✅ Finished ✅
             {% else %}
-            🔥 Let's Finish it! 🔥
+            You're not done yet 😔
             {% endif%}
         </td>
-        <td><button><a href="{% url 'todolist:status_change' item.id %}">Task Status Change</a></button></td>
+        <td><button><a href="{% url 'todolist:task_changes' item.id %}">Task Status Change</a></button></td>
         <td><button><a href="{% url 'todolist:delete_task' item.id %}">Delete Task</a></button></td>
     </tr>
     {% endfor %}
 </table>
 
 <br />
-<button><a href="{% url 'todolist:new_todolist' %}">New To Do List</a></button>
+<button><a href="{% url 'todolist:add_todolist' %}">New To Do List</a></button>
 <button><a href="{% url 'todolist:logout' %}">Logout</a></button>
 <h5>Sesi terakhir login: {{ last_login }}</h5>
+
+{% endblock content %}

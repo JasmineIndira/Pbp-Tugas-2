@@ -74,7 +74,7 @@ def add_todolist(request):
         context = {
             'form' : form,
         }
-        return render(request, 'addToDoList.html', context)
+        return render(request, 'newtodolist.html', context)
     else:
         return redirect('todolist:login')
 
