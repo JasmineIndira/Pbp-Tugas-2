@@ -8,11 +8,11 @@
 
 <style>
     * {
-      font-family: Century;
-      color: black;
+      font-family: Verdana;
+      color: rgb(248, 120, 231);
       text-align: left; 
       vertical-align: text-top;
-      background-color: rgb(255, 255, 255);
+      background-color: rgb(0, 0, 0);
     }
     h1 {
       text-align: center;
@@ -22,7 +22,7 @@
       margin: auto;
       width: 600px;
       padding: 1em;
-      border: 2px solid rgb(0, 0, 0);
+      border: 2px solid rgb(249, 71, 219);
       border-radius: 1em;
       font-size: 15px;
       table-layout:fixed;
@@ -31,7 +31,7 @@
 
 <div class="login">
 
-    <h1>Formulir Registrasi</h1>
+    <h1>Create New Account</h1>
 
     <form method="POST">
         {% csrf_token %}
@@ -39,7 +39,7 @@
             {{ form.as_table }}
             <tr>
                 <td></td>
-                <td><input type="submit" name="submit" value="Daftar" /></td>
+                <td><input type="submit" name="submit" value="Submit" /></td>
             </tr>
         </table>
     </form>

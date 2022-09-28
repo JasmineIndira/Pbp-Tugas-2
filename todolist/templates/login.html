@@ -6,6 +6,37 @@
 
 {% block content %}
 
+<style>
+    * {
+      font-family: Verdana;
+      color: rgb(70, 70, 255);
+      text-align: center; 
+      vertical-align: middle;
+      background-color: rgb(0, 0, 0);
+    }
+    td, input {
+      text-align: left; 
+    }
+    h1 {
+        font-size: 40px;
+    }
+    form {
+      margin: auto;
+      width: 400px;
+      padding: 2em;
+      border: 2px solid rgb(49, 56, 255);
+      border-radius: 1em;
+      table-layout:fixed;
+      font-size: 20px;
+    }
+    h2 {
+      font-size: 15px; 
+    }
+    a, a.visited {
+      color: rgb(244, 24, 24);
+    }
+</style>
+
 <div class="login">
 
     <h1>Login To Do List</h1>
@@ -38,7 +69,7 @@
         </ul>
     {% endif %}
 
-    Belum mempunyai akun? <a href="{% url 'todolist:register' %}">Buat Akun</a>
+    <h2>Belum mempunyai akun? <a href="{% url 'todolist:register' %}">Buat Akun</a></h2>
 
 </div>
 

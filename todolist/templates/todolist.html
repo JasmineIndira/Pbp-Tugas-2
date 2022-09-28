@@ -4,11 +4,11 @@
 
 <style>
     * {
-        font-family: Century;
-        color: black;
+        font-family: Verdana;
+        color: rgb(214, 255, 90);
         text-align: center;
         vertical-align: middle;
-        background-color: rgb(187, 178, 226);
+        background-color: rgb(0, 0, 0);
         font-size: 15px;
     }
 
@@ -27,7 +27,7 @@
     table {
         margin: auto;
         padding: 1em;
-        border: 2px solid rgb(0, 0, 0);
+        border: 2px solid rgb(255, 246, 246);
         border-radius: 1em;
         border-collapse: collapse;
         table-layout: fixed;
@@ -36,19 +36,19 @@
     }
 
     th {
-        color: rgb(0, 0, 0);
+        color: rgb(214, 255, 90);
     }
 
     a,
     a.visited {
-        color: rgb(0, 0, 0);
+        color: rgb(214, 255, 90);
     }
 </style>
 
 <h1>TO DO LIST</h1>
-<h2>Tugas 4 Assignment PBP/PBD</h2>
+<h2>PBP/PBD Assignment 4</h2>
 
-<h3>✨ Welcome {{user_name}} ✨</h3>
+<h3>☆ Welcome {{user_name}} ☆</h3>
 
 <br />
 <table BORDER="1">
@@ -68,9 +68,9 @@
         <td>{{item.description}}</td>
         <td>
             {% if item.is_finished %}
-            ✅ Finished ✅
+            Finished (´⌣`ʃƪ)
             {% else %}
-            You're not done yet 😔
+            Not Finished ༼ ༎ຶ ᆺ ༎ຶ༽
             {% endif%}
         </td>
         <td><button><a href="{% url 'todolist:task_changes' item.id %}">Task Status Change</a></button></td>
@@ -80,7 +80,7 @@
 </table>
 
 <br />
-<button><a href="{% url 'todolist:add_todolist' %}">New To Do List</a></button>
+<button><a href="{% url 'todolist:add_todolist' %}">Add New Task</a></button>
 <button><a href="{% url 'todolist:logout' %}">Logout</a></button>
 <h5>Sesi terakhir login: {{ last_login }}</h5>
 
