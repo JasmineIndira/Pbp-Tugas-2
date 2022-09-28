@@ -22,6 +22,7 @@ Elemen `<form>` dapat dibuat secara manual tanpa menggunakan `{{ form.as_table }
 
   a. Klik submit button
   b. Input diakses dengan memanfaatkan method `request.POST.get(name)` pada `views`, berikut potongan kodenya:
+  
      ```
      if request.method == 'POST' and form.is_valid():
         title = form.cleaned_data['title']
@@ -29,6 +30,7 @@ Elemen `<form>` dapat dibuat secara manual tanpa menggunakan `{{ form.as_table }
         task_baru = ToDoList.objects.create(title=title, description=description,
                                             user=request.user, date=datetime.date.today())
      ```
+  
   c. Merender laman yang akan memuat data yang ingin ditampilkan, sehingga data pada HTML akan menampilkan versi terbaru.
   
 ## Implementasi
