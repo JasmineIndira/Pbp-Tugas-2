@@ -4,12 +4,27 @@
 
 <style>
     * {
-        font-family: Verdana;
-        color: rgb(214, 255, 90);
+        font-family: JasmineUPC;
+        color: rgb(0, 0, 0);
         text-align: center;
         vertical-align: middle;
-        background-color: rgb(0, 0, 0);
         font-size: 15px;
+    }
+
+    body {
+        background-image: url('https://img.freepik.com/free-vector/orange-background-desktop-wallpaper-cute-vector_53876-136872.jpg?w=2000');
+    }
+
+    button {
+        background-color: #4e66df;
+        border: none;
+        color: white;
+        padding: 7px 15px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        border-radius: 12px;
+        font-size: 16px;
     }
 
     h1 {
@@ -27,7 +42,7 @@
     table {
         margin: auto;
         padding: 1em;
-        border: 2px solid rgb(255, 246, 246);
+        border: 2px solid rgb(0, 0, 0);
         border-radius: 1em;
         border-collapse: collapse;
         table-layout: fixed;
@@ -35,53 +50,59 @@
         vertical-align: middle;
     }
 
+    tr {
+        background-color: #f2d8bd;
+    }
     th {
-        color: rgb(214, 255, 90);
+        background-color: #465ddf;
+        color: rgb(0, 0, 0);
     }
 
     a,
     a.visited {
-        color: rgb(214, 255, 90);
+        color: rgb(0, 0, 0);
     }
 </style>
 
-<h1>TO DO LIST</h1>
-<h2>PBP/PBD Assignment 4</h2>
+<body>
+    <h1>TO DO LIST</h1>
+    <h2>PBP/PBD Assignment 4</h2>
 
-<h3>☆ Welcome {{user_name}} ☆</h3>
+    <h3>🍊 Welcome {{user_name}} 🍊</h3>
 
-<br />
-<table BORDER="1">
-    <tr>
-        <th>Task Creation Date</th>
-        <th>Task Title</th>
-        <th>Task Description</th>
-        <th>Task Status</th>
-        <th>Task Button Status</th>
-        <th>Delete Task</th>
-    </tr>
-    {% comment %} Add the data below this line {% endcomment %}
-    {% for item in list_kerjaan %}
-    <tr>
-        <td>{{item.date}}</td>
-        <td>{{item.title}}</td>
-        <td>{{item.description}}</td>
-        <td>
-            {% if item.is_finished %}
-            Finished (´⌣`ʃƪ)
-            {% else %}
-            Not Finished ༼ ༎ຶ ᆺ ༎ຶ༽
-            {% endif%}
-        </td>
-        <td><button><a href="{% url 'todolist:task_changes' item.id %}">Task Status Change</a></button></td>
-        <td><button><a href="{% url 'todolist:delete_task' item.id %}">Delete Task</a></button></td>
-    </tr>
-    {% endfor %}
-</table>
+    <br />
+    <table BORDER="1">
+        <tr>
+            <th>Date 🗒</th>
+            <th>Title 📕</th>
+            <th>Description 📝</th>
+            <th>Status 🔍</th>
+            <th>Status Button 🔔</th>
+            <th>Delete 🗑</th>
+        </tr>
+        {% comment %} Add the data below this line {% endcomment %}
+        {% for item in list_kerjaan %}
+        <tr>
+            <td>{{item.date}}</td>
+            <td>{{item.title}}</td>
+            <td>{{item.description}}</td>
+            <td>
+                {% if item.is_finished %}
+                Finished 🎉
+                {% else %}
+                Not Finished 🥲
+                {% endif%}
+            </td>
+            <td><button1><a href="{% url 'todolist:task_changes' item.id %}">Task Status Change</a></button1></td>
+            <td><button1><a href="{% url 'todolist:delete_task' item.id %}">Delete Task</a></button1></td>
+        </tr>
+        {% endfor %}
+    </table>
 
-<br />
-<button><a href="{% url 'todolist:add_todolist' %}">Add New Task</a></button>
-<button><a href="{% url 'todolist:logout' %}">Logout</a></button>
-<h5>Sesi terakhir login: {{ last_login }}</h5>
+    <br />
+    <button><a href="{% url 'todolist:add_todolist' %}">Add New Task</a></button>
+    <button><a href="{% url 'todolist:logout' %}">Logout</a></button>
+    <h5>Sesi terakhir login: {{ last_login }}</h5>
+</body>
 
 {% endblock content %}

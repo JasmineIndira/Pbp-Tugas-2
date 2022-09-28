@@ -8,50 +8,57 @@
 
 <style>
     * {
-      font-family: Verdana;
-      color: rgb(248, 120, 231);
-      text-align: left; 
-      vertical-align: text-top;
-      background-color: rgb(0, 0, 0);
+        font-family: Marker Felt;
+        color: rgb(0, 0, 0);
+        text-align: left;
+        vertical-align: text-top;
     }
+
+    body {
+        background-image: url('https://images1.pixlis.com/background-image-checkers-chequered-checkered-squares-seamless-tileable-pink-flare-dark-sea-green-2368gx.png');
+    }
+
     h1 {
-      text-align: center;
-      font-size: 35px;
+        text-align: center;
+        font-size: 35px;
     }
+
     form {
-      margin: auto;
-      width: 600px;
-      padding: 1em;
-      border: 2px solid rgb(249, 71, 219);
-      border-radius: 1em;
-      font-size: 15px;
-      table-layout:fixed;
+        margin: auto;
+        width: 600px;
+        padding: 1em;
+        border: 3px solid rgb(249, 71, 219);
+        border-radius: 1em;
+        font-size: 15px;
+        table-layout: fixed;
     }
 </style>
 
-<div class="login">
+<body>
+    <div class="login">
 
-    <h1>Create New Account</h1>
+        <h1>Create New Account</h1>
 
-    <form method="POST">
-        {% csrf_token %}
-        <table>
-            {{ form.as_table }}
-            <tr>
-                <td></td>
-                <td><input type="submit" name="submit" value="Submit" /></td>
-            </tr>
-        </table>
-    </form>
+        <form method="POST">
+            {% csrf_token %}
+            <table>
+                {{ form.as_table }}
+                <tr>
+                    <td></td>
+                    <td><input type="submit" name="submit" value="Submit" /></td>
+                </tr>
+            </table>
+        </form>
 
-    {% if messages %}
+        {% if messages %}
         <ul>
             {% for message in messages %}
             <li>{{ message }}</li>
             {% endfor %}
         </ul>
-    {% endif %}
+        {% endif %}
 
-</div>
+    </div>
+</body>
 
 {% endblock content %}
