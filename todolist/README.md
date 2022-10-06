@@ -95,6 +95,7 @@ Kekurangan Inline CSS
 
 ## Tag HTML5
   
+```html
 <a>	Mendefinisikan hyperlink.
 <b>	Memunculkan teks dalam bentuk bold.
 <body>	Mendefinisikan document's body.
@@ -114,6 +115,7 @@ Kekurangan Inline CSS
 <title>	Mendefinisikan sebuah title untuk document.
 <tr>	Mendefinisikan sebuah row of cells untuk table.
 <u>	Mendisplay text dengan underline.
+```
   
 ## Tipe CSS Selector
 
