@@ -95,6 +95,26 @@ Kekurangan Inline CSS
 
 ## Tag HTML5
   
+<a>	Mendefinisikan hyperlink.
+<b>	Memunculkan teks dalam bentuk bold.
+<body>	Mendefinisikan document's body.
+<br>	Membuat single line break.
+<button>	Membuat sebuah clickable button.
+<div>	Mendefinisikan sebuah divisi atau section dalam document.
+<head>	Mendefiniskan bagian head dari dokumen yang mengandung informasi tentang dokumen seperti title.
+<header>	Merepresentasikan header dari dokumen atau section.
+<h1> - <h6>	Mendefinisikann HTML headings.
+<html>	Mendefinisikan root dari HTML document.
+<i>	Mendisplay text dalam italic style.
+<img>	RMerepresentasikan sebuah image.
+<p>	Mendefinisikan sebuah paragraph.
+<table>	Mendefinisikan sebuah data table.
+<td>	Mendefinisikan sebuah cell dalam table.
+<th>	Mendefinisikan sebuah header cell dalam table.
+<title>	Mendefinisikan sebuah title untuk document.
+<tr>	Mendefinisikan sebuah row of cells untuk table.
+<u>	Mendisplay text dengan underline.
+  
 ## Tipe CSS Selector
 
 1. `Type Selector`. Selektor ini akan memilih elemen berdasarkan nama tag.
