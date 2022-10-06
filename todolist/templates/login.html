@@ -55,22 +55,23 @@
 
     <form method="POST" action="">
       {% csrf_token %}
-      <table>
-        <tr>
-          <td>Username: </td>
-          <td><input type="text" name="username" placeholder="Username" class="form-control"></td>
-        </tr>
-
-        <tr>
-          <td>Password: </td>
-          <td><input type="password" name="password" placeholder="Password" class="form-control"></td>
-        </tr>
-
-        <tr>
-          <td></td>
-          <td><input class="btn login_btn" type="submit" value="Login"></td>
-        </tr>
-      </table>
+      <div class="username">
+        <div class="col-xl-2 align-self-center">
+            <label class="form-lable" for="user_username">Username:</label>
+        </div>
+        <div class="col align-self-center">
+            <input type="text" name="username" placeholder="Input username" id="user_username" class="form-control">
+        </div>
+    </div>
+    <div class="password">
+        <div class="col-xl-2 align-self-center">
+            <label class="form-lable" for="user_password">Password:</label>
+        </div>
+        <div class="col align-self-center">
+            <input type="password" name="password" placeholder="Input password" id="user_password" class="form-control">
+        </div>
+    </div>
+    <input type="submit" name="submit" value="Login" class="btn btn-outline-dark mx-auto d-block">
     </form>
 
     {% if messages %}

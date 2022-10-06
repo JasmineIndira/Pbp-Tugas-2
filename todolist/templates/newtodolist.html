@@ -27,8 +27,8 @@
         margin: auto;
         width: 400px;
         padding: 1em;
-        border: 3px solid rgb(77, 53, 213);
-        background-color: rgb(172, 179, 252);
+        border: 3px solid rgb(228, 60, 194);
+        background-color: rgb(105, 253, 157);
         border-radius: 1em;
         font-size: 17px;
         table-layout: fixed;
@@ -40,33 +40,26 @@
 
         <h1>🌱 Add Task 🌱</h1>
 
-        <form method="POST">
+        <form method="POST" >  
             {% csrf_token %}
-            <table>
-                <tr>
-                    <td>Task Title: </td>
-                    <td><input type="text" name="title" placeholder="Title" class="form-control"></td>
-                </tr>
-                <tr>
-                    <td>Description: </td>
-                    <td><input type="text" name="description" placeholder="Description" class="form-control"></textarea>
-                    </td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td><input type="submit" name="submit" value="submit" /></td>
-                </tr>
-            </table>
+            <div class="title">
+                <div class="col-xl-2 align-self-center">
+                    <label class="form-lable" for="user_title">Title:</label>
+                </div>
+                <div class="col align-self-center">
+                    <input type="text" name="title" placeholder="Input title" id="user_title" class="form-control">
+                </div>
+            </div>
+            <div class="description">
+                <div class="col-xl-2 align-self-center">
+                    <label class="form-lable" for="user_description">Description:</label>
+                </div>
+                <div class="col align-self-center">
+                    <input type="text" name="description" placeholder="Input description" id="user_description" class="form-control">
+                </div>
+            </div>
+            <input type="submit" name="submit" value="Create New Task" class="btn btn-outline-dark mx-auto d-block">
         </form>
-        {% if messages %}
-        <ul>
-            {% for message in messages %}
-            <li>{{ message }}</li>
-            {% endfor %}
-        </ul>
-        {% endif %}
-
-    </div>
 </body>
 
 {% endblock content %}
