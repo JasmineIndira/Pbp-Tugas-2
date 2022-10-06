@@ -63,5 +63,116 @@ Elemen `<form>` dapat dibuat secara manual tanpa menggunakan `{{ form.as_table }
   ]
   ```
 6. Mendeploy ke Heroku dengan push berkas ke github dan merefresh workflow gagal di github.
+  
+## Internal CSS, Eksternal CSS, Inline CSS  
+`Internal CSS` code diletakkan di dalam bagian <head> pada halaman. Class dan ID bisa digunakan untuk merujuk pada kode CSS, namun hanya akan aktif pada halaman tersebut. CSS internal diletakkan di dalam tag `<style>` `</style>`.
+Manfaat internal CSS:
+* Perubahan hanya terjadi pada 1 halaman
+* Class dan ID bisa digunakan oleh internal stylesheet
+* Tidak perlu meng-upload beberapa file karena HTML dan CSS bisa digunakan di file yang sama.
+
+Kekurangan menggunakan Internal CSS:
+* Meningkatkan waktu akses website
+* Perubahan hanya terjadi pada 1 halaman – tidak efisien bila Anda ingin menggunakan CSS yang sama pada beberapa file.
+
+
+`Eksternal CSS` adalah kode CSS yang ditulis terpisah dengan kode HTML Eksternal CSS ditulis di sebuah file khusus yang berekstensi .css. eksternal CSS biasanya diletakkan setelah bagian `<head>` `</head>`.
+
+Manfaat External CSS
+* Ukuran file HTML akan menjadi lebih kecil dan struktur dari kode HTML jadi lebih rapi.
+* Loading website menjadi lebih cepat.
+* File CSS dapat digunakan di beberapa halaman website sekaligus. 
+Kekurangan External CSS
+* Halaman akan menjadi berantakan, ketika file CSS gagal dipanggil oleh file HTML. Hal ini terjadi disebabkan karena koneksi internet yang lambat.
+
+`Inline CSS` adalah kode CSS yang ditulis langsung pada atribut elemen HTML. Setiap elemen HTML memiliki atribut style, di situ lah inline CSS ditulis.
+Manfaat Inline CSS
+* Sangat membantu ketika Anda hanya ingin menguji dan melihat perubahan pada satu elemen.
+* Berguna untuk memperbaiki kode dengan cepat.
+* Proses permintaan HTTP yang lebih kecil dan proses load website akan lebih cepat.
+Kekurangan Inline CSS
+* Tidak efisien karena Inline style CSS hanya bisa diterapkan pada satu elemen HTML.
+
+## Tag HTML5
+<a>	Mendefinisikan hyperlink.
+<b>	Memunculkan teks dalam bentuk bold.
+<body>	Mendefinisikan document's body.
+<br>	Membuat single line break.
+<button>	Membuat sebuah clickable button.
+<div>	Mendefinisikan sebuah divisi atau section dalam document.
+<head>	Mendefiniskan bagian head dari dokumen yang mengandung informasi tentang dokumen seperti title.
+<header>	Merepresentasikan header dari dokumen atau section.
+<h1> - <h6>	Mendefinisikann HTML headings.
+<html>	Mendefinisikan root dari HTML document.
+<i>	Mendisplay text dalam italic style.
+<img>	RMerepresentasikan sebuah image.
+<p>	Mendefinisikan sebuah paragraph.
+<table>	Mendefinisikan sebuah data table.
+<td>	Mendefinisikan sebuah cell dalam table.
+<th>	Mendefinisikan sebuah header cell dalam table.
+<title>	Mendefinisikan sebuah title untuk document.
+<tr>	Mendefinisikan sebuah row of cells untuk table.
+<u>	Mendisplay text dengan underline.
+  
+## Tipe CSS Selector
+
+1. `Type Selector`. Selektor ini akan memilih elemen berdasarkan nama tag.
+```
+p {
+    color: blue;
+}
+```
+```
+<p>PBP Assignment 5</p>
+```
+
+2. `Selektor class`. selektor yang memilih elemen berdasarkan nama class yang diberikan.
+
+```
+.text-white {
+    color: white;
+}
+
+.bg-teal {
+    background: teal;
+}
+```
+```
+<h2 class="text-white bg-teal">Tutorial Lab 5</h2>
+```
+
+3. `Selektor ID` mirip dengan class tetapi hanya boleh digunakan oleh satu elemen saja.
+```
+#header {
+    background: teal;
+    color: white;
+    height: 100px;
+    padding: 50px;
+}
+```
+```
+<header id="header">
+    <h1>Selamat Datang di Website Saya</h1>
+</header>
+```
+4. `Selektor universal` adalah selektor yang digunakan untuk menyeleksi semua elemen pada jangkaua (scope) tertentu.
+```
+* {
+    border: 1px solid grey;
+}
+```
+  
+## Cara Mengimplementasikan Checklist
+  
+Menggunakan framework Bootstrap untuk mengubah laman login, register, todolist, dan newtodolist. Pertama saya memasukkan link bootstrap pada `base.html`
+```
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+```
+Kemudian saya mengkostumisasi elemen-elemen dalam HTML yang sudah saya buat sebelumnya.
+Melakukan kostumisasi pada laman todolist dengan membuat 1 card untuk setiap task yang ditambahkan.
+Membuat keempat halaman menjadi responsive.
+Melakukan deploy pada Heroku.
+
 
 
