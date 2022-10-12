@@ -7,8 +7,9 @@ from django.contrib.auth.forms import UserCreationForm
 from django.contrib import messages
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
-from django.http import HttpResponseRedirect
+from django.http import HttpResponseRedirect, HttpResponse, JsonResponse
 from django.urls import reverse
+from django.core import serializers
 
 # Create your views here.
 
@@ -79,6 +80,35 @@ def add_todolist(request):
         return redirect('todolist:login')
 
 @login_required(login_url='/todolist/login/')
+def add_todolist_ajax(request):
+    # Pastikan user sudah log in
+    if request.user.is_authenticated:
+        # Ambil form-nya dari http request
+        form = ToDoListForms(request.POST)
+        response_data = {}
+        
+        # Handle jika form valid dan method request adl. POST
+        if request.method == 'POST' and form.is_valid():
+            # Ambil title & description dari form, buat task baru, lalu redirect
+            # ke halaman utama
+            title = form.cleaned_data['title']
+            description = form.cleaned_data['description']
+            task_baru = ToDoList.objects.create(title=title, description=description,
+                                                user=request.user, date=datetime.date.today())
+            response_data['title'] = title
+            response_data['description'] = description
+            response_data['date'] = datetime.date.today()
+            return JsonResponse(response_data);
+
+        # Render halaman add task
+        context = {
+            'form': form,
+        }
+        return render(request, 'addToDoList.html', context)
+    else:
+        return redirect('todolist:login')
+
+@login_required(login_url='/todolist/login/')
 def task_changes(request, id):
     task_todolist = ToDoList.objects.get(id=id)
     task_todolist.is_finished = not task_todolist.is_finished
@@ -90,3 +120,8 @@ def delete_task(request, id):
     task_todolist = ToDoList.objects.get(id=id)
     task_todolist.delete()
     return redirect('todolist:show_todolist')
+
+@login_required(login_url='/todolist/login/')
+def get_json(request):
+    todolist = ToDoList.objects.filter(user=request.user)
+    return HttpResponse(serializers.serialize("json", todolist), content_type="application/json")
