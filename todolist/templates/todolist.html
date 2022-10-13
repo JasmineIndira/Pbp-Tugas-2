@@ -1,12 +1,6 @@
 {% extends 'base.html' %}
-{% load static %}
-
-{% block meta %}
-<title>{{username}}'s To Do List</title>
-{% endblock meta %}
 
 {% block content %}
-<!doctype html>
 <style>
     * {
         font-family: Marker Felt;
@@ -66,15 +60,13 @@
     }
 </style>
 
-<body class="padding">
+<body>
     <h1> TO DO LIST</h1>
-    <div class="wrap" style="margin-bottom: 40px;">
         <h2>PBP/PBD Assignment 6</h2>
         <h3>🍊 Welcome {{user_name}} 🍊</h3>
         <button type="button" class="btn btn-primary done mb-2" data-bs-toggle="modal"
-            data-bs-target="#exampleModal" style="text-align: center">Create new task</button>
+            data-bs-target="#exampleModal" style="text-align: center; font-family: Marker Felt;">Create new task</button>
     </div>
-    <!-- Modal -->
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -92,7 +84,7 @@
                 </div>
                 <div class="modal-footer" style="justify-content: center;">
                     <button id="button" type="submit" class="button_select button_select_new"
-                        data-bs-dismiss="modal">Save</button>
+                        data-bs-dismiss="modal">Submit</button>
                 </div>
             </div>
         </div>
@@ -103,7 +95,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script>
         $(document).ready(function () {
-            showTask();
+            addTask();
         });
 
         document.getElementById("button").onclick = addTodo
@@ -112,11 +104,11 @@
             fetch("{% url 'todolist:add_todolist_ajax' %}", {
                 method: "POST",
                 body: new FormData(document.querySelector('#form'))
-            }).then(showTask)
+            }).then(addTask)
             return false
         }
 
-        function showTask() {
+        function addTask() {
             let htmlString = "";
             $.ajax({
                 url: "./json/",
@@ -135,7 +127,7 @@
               <div class="col-md-6 col-lg-3">
                 <div class="card shadow p-3 mb-5 bg-white rounded border-0" style="padding-right: 10px;">
                     <div class="card-body d-flex flex-column">
-                    <h4 class="card-title" style="font-weight: bold; color: #6638A6;">${task.fields.title}</h4>
+                    <h4 class="card-title" style="font-weight: bold;">${task.fields.title}</h4>
                     <h5 class="card-text">
                         ${response}
                     </h5>
